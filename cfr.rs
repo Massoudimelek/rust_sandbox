@@ -11,9 +11,11 @@ fn are_you_on_linux() {
 }
 
 fn main() {
+    // cfg attribute call
     are_you_on_linux();
 
     println!("Are you sure?");
+    // cfg! is a macro that returns a boolean 
     if cfg!(target_os = "linux") {
         println!("Yes. It's definitely linux!");
     } else {
